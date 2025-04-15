@@ -1,0 +1,262 @@
+body {
+    display: flex;
+        justify-content: center; /* Zentriert den Inhalt horizontal */
+        align-items: flex-start; /* Oben ausrichten */
+        min-height: 100vh; /* Stellt sicher, dass der Container immer den gesamten Viewport abdeckt */
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color:aliceblue;
+    }
+    
+    
+    
+    .container {
+        width: 90%; /* Das ist die Breite des Containers, 100 % füllt das Element die gesamte verfügbare Breite aus.  */
+        margin: 0 auto; /* Außenabstand:das Element wird horizontal in der Mitte des übergeordneten Containers ausgerichtet.   */
+        padding: 20px; /*Innenabstand: Fügt dem Element rundherum ...Pixel Abstand zwischen dem Inhalt des Elements und seinem Rand hinzu. */
+        background:linear-gradient(to bottom, #8bbce4 10%, transparent 20%);
+    }
+    .hintergrund {
+        position: relative; /* Es kann verschoben werden,ohne die anderen Elemente zu beeinflussen */
+        background-image: url('https://guidetoiceland.imgix.net/460045/x/0/the-geosea-sea-baths-are-unique-saltwater-baths.jpg?ar=1.91:1&w=1200&fit=crop');
+        background-size: cover; /* Hintergrundgröße: Stellt sicher, dass das Hintergrundbild die gesamte Fläche des Elements abdeckt, ohne das Seitenverhältnis zu verzerren  */
+        background-position: center; /* Hintergrundposition: Platziert das Hintergrundbild in der Mitte des Elements, sowohl horizontal als auch vertikal. */
+        height: 300px; /* Höhe: Legt die Höhe des Elements fest  */
+        text-align: center; /* Textausrichtung: Zentriert den Text innerhalb des Elements. */
+        padding: 30px; /* Polsterung: Fügt dem Element rundherum ...Pixel Abstand zwischen dem Inhalt und dem Rand des Elements hinzu.  */
+    }
+    .hintergrund h1 {
+        display: inline-block; /* die Eigenschaft setzt das Element auf inline-block,es verhält sich dann wie ein inline-Element aber man kann Margen, Padding und andere Layout-Eigenschaften darauf anwenden,da es gleichzeitig wie ein Block-Element behandelt wird. */
+        padding: 10px 20px; /* fügt dem Element Innenabstand hinzu */
+        margin-top: -20px; /*reduziert den Abstand oben und verschiebt die Überschrift nach oben  */
+        color: white; /*Schriftfarbe  */
+        font-family:"Denk One", serif; /* Schriftart */
+        font-size: 50px;/* Schrifgröße */
+        font-style: italic;/* Schrift kursiv */
+        text-shadow: 10px 8px 12px rgba(0, 0, 0, 0.5); /* Fügt einen Schatten hinzu */
+    }
+    
+    
+    
+    .suche {
+        margin: 20px 0;
+        text-align: center;
+        background-color: #f4f4f4; /* Hintergrundfarbe für den Suche-Container */
+        border: 3px solid #0f0e0e;
+        border-radius: 5px;
+    }
+    .suche input {
+        padding: 8px;
+        width: 100%; /* Input-Feld nimmt den gesamten verfügbaren Platz ein */
+        max-width: 200px;
+        border: 1px solid #0f0e0e;
+        border-radius: 5px;
+        margin-bottom: 10px; /* Abstand nach unten zum Button */
+    }
+    .suche button {
+        padding: 10px 20px;
+        background-color: rgb(170, 167, 167);
+        color: white;
+        border: none;
+        cursor: pointer;/* Mauszeiger (Cursor) zu ändern und ihn in eine Hand zu verwandeln */
+        border-radius: 4px;
+        font-size: 10px;
+    }
+    .suche button:hover {
+        background-color: #7cb6e6;
+    }
+    .suche h2 {
+    font-size: 25px;
+    font-family:"Sedan", serif;
+    text-align:center;
+    margin-bottom: 1px; /* Geringer Abstand zum Link */
+    background-color: rgba(218, 213, 213, 0.514);
+    }
+    
+    
+    
+    .container2 {
+        display: flex;             /* Setzt Flexbox für den Container ein */
+        flex-direction: column;    /* Stellt sicher, dass die Inhalte vertikal untereinander angezeigt werden */
+        gap: 100px;                 /* Fügt einen Abstand zwischen den Bildern und den Videos hinzu */
+        justify-content: flex-start; /* Oben im Container ausrichten */
+        align-items: flex-start; /* Links ausrichten */
+        padding: 20px;
+        background-color: antiquewhite;
+        width: 300px; /* Feste Breite für den Container */
+        margin: 40px 0; /* Abstand nach oben und unten */
+        border-radius: 8px; /* Abrundung der Ecken */
+        box-sizing: border-box;
+    }
+    .rechte-Bilder {
+        display: flex;             /* Flexbox für die Videos aktivieren */
+        flex-direction: row;       /* Die Videos nebeneinander anordnen */
+        gap: 10px;                 /* Abstand zwischen den Videos */
+        justify-content: center;   /* Zentriert die Videos horizontal */
+        padding: 20px;              /* Fügt dem Container einen Innenabstand hinzu, um Bilder vom Rand zu entfernen */
+        box-sizing: border-box;     /* Stellt sicher, dass das Padding zur Gesamtbreite des Containers zählt */
+    }
+    .image-item {
+        display: flex;             /* Flexbox für jedes Bild */
+        flex-direction: column;    /* Stellt sicher, dass das Bild, die Überschrift und der Text untereinander angezeigt werden */
+        align-items: center;       /* Zentriert die Elemente horizontal */
+        align-items: flex-start;   /* Richtet alle Elemente links aus */
+        gap: 5px;                  /* Fügt einen Abstand zwischen den Bild, Überschrift und Text hinzu */
+        width: 200px;              /* Setzt eine feste Breite für jedes Bild-Element */
+    }
+    .rechte-Bilder img {
+        width: 200px;              /* Breite der Bilder */
+        height: auto;              /* Höhe automatisch skalieren, damit das Bild nicht verzerrt wird */
+        border-radius: 10px;       /* Abgerundete Ecken */
+    }
+    .videos {
+        display: flex;             /* Flexbox für die Videos aktivieren */
+        flex-direction: row;       /* Die Videos nebeneinander anordnen */
+        gap: 10px;                 /* Abstand zwischen den Videos */
+        justify-content: center;   /* Zentriert die Videos horizontal */
+    }
+    .videos iframe {
+        width: 180px;              /* Setzt die Breite der Videos */
+        height: 120px;             /* Setzt die Höhe der Videos */
+        border-radius: 10px;       /* Abgerundete Ecken für das Video */
+    }
+    .videos h3 {
+        color: #333;                           /* Dunkle Farbe für die Überschrift */
+        font-size: 15px;                       /* Setzt die Schriftgröße */
+        font-weight: bold;                    /* Macht den Text fett */
+        font-family: Arial, sans-serif; /* Schriftart */
+        text-align: center;
+    }
+    .videos p, .rechte-Bilder p {
+        color: #555;              /* Setzt die Farbe des Texts */
+        text-align: center;
+        font-size: 12px;           /* Setzt die Schriftgröße für den Text */
+        margin-top: 0; /* Entfernt den Standard-Abstand zum oberen Rand */
+        margin-bottom: 5px; /* Du kannst hier auch den Abstand nach unten einstellen */
+    }
+    .rechte-Bilder h4 {
+        margin: 0px;                             /* Entfernt den Standardabstand der Überschrift */
+        color: #333;                           /* Dunkle Farbe für die Überschrift */
+        padding: 1px;                           /* Padding für die Überschrift */
+        font-size: 15px;                       /* Setzt die Schriftgröße */
+        font-weight: bold;                    /* Macht den Text fett */
+        font-family: "", serif;               /* Schriftart */
+        text-align: center;
+    }
+    
+    
+    
+    .links-container {
+        text-align: left;
+        display: flex;
+        flex-direction: column; /* Elemente untereinander anordnen */
+        align-items: flex-start; /* Ausrichtung nach links */
+    }
+    ul {
+        list-style-type: none; /* Entfernt Standard-Aufzählungszeichen */
+        padding: 0; /* Entfernt Padding von der Liste */
+    }
+    li {
+        margin: 3px 0; /* Abstand zwischen den Listenelementen */
+    }
+    a {
+        text-decoration: none; /* Entfernt die Standard-Unterstreichung */
+        color: black; /* Standardfarbe des Links */
+        font-size: 16px; /* Schriftgröße */
+    }
+    a:hover {
+        color: rgb(4, 0, 248); /* Farbe des Links bei Hover */
+    }
+    
+    
+    
+    .schnorcheln {
+        border: 8px solid antiquewhite;
+        border-radius: 15px;
+        width: 25%;
+    }
+    .sch{
+        background-image: url(https://gti.images.tshiftcdn.com/467430/x/0/das-tauchen-in-der-silfra-spalte-ist-eine-einmalige-gelegenheit.jpg?auto=format%2Ccompress&fit=crop&crop=center&dpr=1&ixlib=react-9.8.1&q=32&w=860&h=360);
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 7px;
+        height: 180px;
+        
+    }
+    .immen{
+        background-image: url(https://gti.images.tshiftcdn.com/467834/x/0/tauchen-in-silfra-bedeutet-tauchen-in-einem-der-klarsten-gewaesser-der-welt.jpg?auto=format%2Ccompress&fit=crop&crop=center&dpr=1&ixlib=react-9.8.1&q=32&w=860&h=360);
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 7px;
+        height: 180px;
+       
+        font-weight: bold;
+    
+    }
+    .schwimmen {
+        background-image: url(https://gti.images.tshiftcdn.com/270657/x/0/freitauchen-in-der-atemberaubenden-silfra-schlucht.jpg?auto=format%2Ccompress&fit=crop&crop=center&dpr=1&ixlib=react-9.8.1&q=32&w=860&h=360);
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 7px;
+        height: 180px;
+        font-weight: bold;
+    }
+    .andereSchrift {
+        font-family: "Timmana", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    h3, p {
+        padding: 15px;
+        margin: 0;
+    }
+    #tauchen {
+        display: flex; /* Flex übernimmt die Kontrolle über die Position der Kinder */
+        flex-wrap: wrap; /* Wenn der Browserplatz nicht ausreicht, zeige "übrige" Kinder in einer neuer Zeile an */
+        justify-content: center;/* Zentriere die Kinder */
+        gap: 50px;/* Gap - "Lücke" - Abstand ZWISCHEN den Kind-Elementen */
+    }
+    
+    
+    
+    .footer {
+        background-color: #52505083;;
+        padding: 20px;
+        margin-top: 40px;
+        text-align: center;
+        width: 100%; /* Footer auf die volle Breite der Seite ausdehnen */
+    }
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .footer a {
+        text-decoration: none;
+        color: #000268da;
+    }
+    .footer ul li a:hover {
+        text-decoration: underline;
+        font-family: bold;
+    }
+    .social-media {
+        margin-top: 20px;
+    }
+    .social-media a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #0c0c0c;
+    }
+    .social-media a:hover {
+        text-decoration: underline;
+    }

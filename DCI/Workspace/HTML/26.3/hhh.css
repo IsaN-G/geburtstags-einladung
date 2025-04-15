@@ -1,0 +1,79 @@
+/* Grundstyling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Container für Bild und Text */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: 20px;
+}
+
+img {
+    max-width: 45%;
+    float: left;
+    margin-right: 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+/* Styling der Box für Inhaltsverzeichnis */
+.Inhalt {
+    border-style: outset;
+    width: 20%;
+    border-color: rgb(77, 78, 78);
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.Inhalt a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.Inhalt a:hover {
+    text-decoration: underline;
+}
+
+/* Box rechts */
+.rechts {
+    float: right;
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+}
+
+/* Sektionen Styling */
+div {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+

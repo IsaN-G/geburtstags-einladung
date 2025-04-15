@@ -1,0 +1,39 @@
+body{
+    background-color:rgb(61, 133, 109)
+
+}
+
+h1 {
+    font-size: 60px;
+    font-style: italic;
+}
+p { 
+
+font-size: 25px;
+font-style:arial;
+
+} 
+
+.Text{
+    width: 700px;
+    font-style:oblique;
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 3px;
+    font-size: 19px;
+}
+h4,h5 {
+    font-size: 20px;
+    padding: 2px;
+    margin: 9px;
+}
+.Seite {
+    font-size: 20px;
+    border: 2px solid rgb(7, 7, 7);
+    border-radius: 8px;
+    width: 100px;
+    padding: 6px;
+    
+}
+
+
