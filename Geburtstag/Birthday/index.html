@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Einladung zum 40. Geburtstag – Yvonne & Isabelle</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #3a2a32 0%, #2d1f28 50%, #1a1216 100%),
+        linear-gradient(to bottom, #1b1418 0%, #0f0b0d 100%);
+      background-blend-mode: overlay;
+      color: #eee;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(212,175,55,0.15) 1px, transparent 1px);
+      background-size: 100px 100px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      max-width: 420px;
+      margin: 50px auto;
+      background: linear-gradient(180deg, #1b1418, #0f0b0d);
+      border-radius: 26px;
+      padding: 34px 26px 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.85),
+                  inset 0 0 0 1px rgba(212,175,55,0.25);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 1.2s ease both;
+      z-index: 1;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .particles {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(212,175,55,0.35) 1px, transparent 1px);
+      background-size: 80px 80px;
+      opacity: 0.15;
+      animation: float 40s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      from { background-position: 0 0; }
+      to { background-position: 0 600px; }
+    }
+
+    h2 {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #d6b47b;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2.3rem;
+      margin: 0 0 6px;
+      background: linear-gradient(90deg, #f5e6c8, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .names {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      color: #f1d7a0;
+      margin-bottom: 16px;
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      margin: 14px auto 22px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(212,175,55,0.4),
+        0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: sepia(15%) contrast(105%);
+    }
+
+    .divider {
+      width: 70px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d4af37, transparent);
+      margin: 22px auto;
+    }
+
+    .age-b {
+      position: relative;
+      margin: 18px 0;
+    }
+
+    .age-b .number {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #d4af37;
+      text-shadow: 0 0 18px rgba(212,175,55,0.35);
+    }
+
+    .countdown {
+      font-size: 0.8rem;
+      color: #f1d7a0;
+      margin-top: 6px;
+      letter-spacing: 0.08em;
+    }
+
+    .details {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: #d6b47b;
+      margin: 18px 0;
+    }
+
+    .details strong {
+      color: #e9d7a3;
+    }
+
+    .note {
+      margin: 18px 0;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      color: #cdbb8a;
+      font-style: italic;
+    }
+
+    .special-note {
+      color: #e9d7a3; /* Goldton passend zu den Akzenten */
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .dresscode {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: #d6b47b;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #d6b47b;
+    }
+
+    .extras {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .extras p {
+      font-size: 0.7rem;
+      color: #bfae7a;
+      margin-top: -6px;
+    }
+
+    .actions {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .button {
+      align-self: center;
+      padding: 10px 22px;
+      border-radius: 24px;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      color: #1a1a1a;
+      background: linear-gradient(135deg, #e9d7a3, #d4af37);
+      box-shadow: 0 6px 14px rgba(212,175,55,0.35);
+      transition: all 0.25s ease;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: #f1d7a0;
+      box-shadow: inset 0 0 0 1px rgba(212,175,55,0.4);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(212,175,55,0.5);
+    }
+
+    .map {
+      margin-top: 26px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 120px;
+      border-radius: 14px;
+      border: none;
+      filter: grayscale(40%) contrast(105%);
+      box-shadow: inset 0 0 0 1px rgba(212,175,55,0.25);
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      color: #d6b47b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="particles"></div>
+
+    <h2>Einladung</h2>
+    <h1>Wir werden 40</h1>
+    <div class="names">Yvonne & Isabelle</div>
+
+    <div class="photo">
+      <img src="zwillinge.jpg" alt="Yvonne und Isabelle als Babys">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="age-b">
+      <span class="number">40</span>
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="details">
+      Feiert mit uns einen besonderen Abend zu unserem <strong>40. Geburtstag</strong>.<br><br>
+      <strong>Wann:</strong> Samstag, 18. April 2026 · ab 17:00 Uhr<br>
+      <strong>Wo:</strong> Engelbosteler Damm 30 · 30167 Hannover
+    </div>
+
+    <div class="note">
+      „Statt Geschenke zu suchen – freuen wir uns über einen kleinen Beitrag für unser nächstes Abenteuer.“
+    </div>
+
+    <div class="dresscode">
+      Dresscode · Black · Gold · Elegant Chic
+    </div>
+
+    <div class="special-note">
+      Wir freuen uns, wenn ihr gemeinsam mit eurer besseren Hälfte kommt.<br>
+      Bitte gebt bei eurer Zusage kurz an, ob ihr alleine oder zu zweit kommt.
+    </div>
+
+    <div class="section-title">Extras</div>
+    <div class="extras">
+      <a class="button secondary" href="menü.html">🍽 Speisekarte</a>
+
+      <a class="button secondary" href="https://open.spotify.com/playlist/DEIN_LINK" target="_blank" rel="noopener">🎵 Playlist mitgestalten</a>
+      <p>Bitte maximal 5 Songs pro Person 💛</p>
+
+      <a class="button secondary" href="https://photos.app.goo.gl/DEIN_LINK" target="_blank" rel="noopener">📸 Partyfotos hochladen</a>
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=Engelbosteler+Damm+30+Hannover&output=embed"></iframe>
+    </div>
+
+    <div class="actions">
+      <a class="button" href="https://wa.me/491701234567">Zusage an Yvonne</a>
+      <a class="button" href="https://wa.me/491761234567">Zusage an Isabelle</a>
+      <a class="button secondary" href="https://www.google.com/search?q=Unterkunft+Hannover">Unterkünfte</a>
+    </div>
+
+    <footer>
+      Wir freuen uns auf euch ✨
+    </footer>
+  </div>
+
+  <script>
+    const targetDate = new Date("2026-04-18T17:00:00");
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "Heute ist es soweit ✨";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      countdownEl.textContent = `Noch ${days} Tage`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 86400000);
+  </script>
+</body>
+</html>
+
